@@ -5,7 +5,7 @@ const path = require("path");
 const userAuthRoutes = require("./routes/user/auth.route");
 const AdminproductRoutes = require("./routes/admin/product.route");
 const adminAuthRoutes = require("./routes/admin/auth.route");
-
+const adminUserRoutes = require("./routes/admin/user.route");
 
 const globalErrorHandler = require("./utils/error.util");
 
@@ -30,6 +30,7 @@ app.use("/api/user/auth",userAuthRoutes);
 
 app.use("/api/admin/product",AdminproductRoutes);
 app.use("/api/admin/auth", adminAuthRoutes);
+app.use("/api/admin/users", adminUserRoutes);
 
 app.use(globalErrorHandler);
 module.exports = app;
